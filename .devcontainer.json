@@ -1,16 +1,7 @@
 {
-    "name": "Recipe Search Web Service",
-    "dockerFile": "Dockerfile",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "vscjava.vscode-java-pack",
-                "vscjava.vscode-maven",
-                "redhat.java"
-            ]
-        }
+    "build": {
+        "dockerfile": "Dockerfile"
     },
     "forwardPorts": [8080],
-    "postCreateCommand": "mvn clean package",
-    "remoteUser": "vscode"
+    "postCreateCommand": "catalina.sh run"
 }
